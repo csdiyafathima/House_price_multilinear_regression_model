@@ -23,7 +23,7 @@ bedrooms = st.number_input(
 )
 
 floor = st.number_input(
-    " no of Floors)",
+    " no of Floors",
     min_value=1.0,
     max_value=10.0,
     value=5.0,
