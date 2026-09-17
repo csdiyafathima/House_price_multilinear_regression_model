@@ -1,6 +1,6 @@
 import streamlit as st
 import joblib
-model = joblib.load("house_price_multilinear_regression_model.pkl")
+model = joblib.load("house_price_multilinear_regression.pkl")
 st.title("🏠 House Price Prediction")
 
 st.write(
@@ -8,8 +8,8 @@ st.write(
 )
 area = st.number_input(
     "📐 Area (sq ft)",
-    min_value=100.0,
-    max_value=10000.0,
+    min_value=500.0,
+    max_value=2400.0,
     value=1000.0,
     step=50.0
 )
@@ -17,15 +17,15 @@ area = st.number_input(
 bedrooms = st.number_input(
     "🛏️ Number of Bedrooms",
     min_value=1,
-    max_value=10,
+    max_value=5,
     value=2,
     step=1
 )
 
 age = st.number_input(
     "🏠 Age of House (years)",
-    min_value=0.0,
-    max_value=100.0,
+    min_value=1.0,
+    max_value=20.0,
     value=5.0,
     step=1.0
 )
