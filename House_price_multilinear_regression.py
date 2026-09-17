@@ -29,7 +29,7 @@ age = st.number_input(
     value=5.0,
     step=1.0
 )
-if st.button("💰 Predict House Price"):
+if st.button(" Predict House Price"):
 
     input_data = [[area, bedrooms, age]]
 
