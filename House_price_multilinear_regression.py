@@ -30,24 +30,24 @@ age = st.number_input(
     step=1.0
 )
 if st.button("Predict"):
-    if Area < 200:
+    if area < 200:
         st.error("Area cannot be less than 200.")
     
-    elif Area > 600:
+    elif area > 600:
         st.error("Area cannot be more than 600.")
-    elif Bedrooms < 1:
+    elif bedrooms < 1:
         st.error("Number of bedrooms must be at least 1.")
 
-    elif Bedrooms > 7:
+    elif bedrooms > 7:
         st.error("Number of bedrooms cannot be more than 7.")
-    elif Age < 5:
+    elif age < 5:
         st.error("House age cannot be less than 5 years.")
 
-    elif Age > 25:
+    elif age > 25:
         st.error("House age cannot be more than 25 years.")
 
     else:
-        prediction = model.predict([[Area, Bedrooms, Age]])
+        prediction = model.predict([[area, bedrooms, age]])
 
         st.success(
             f"Predicted House Price: ${prediction[0]:,.2f}"
