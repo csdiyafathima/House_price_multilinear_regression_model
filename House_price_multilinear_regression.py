@@ -1,6 +1,6 @@
 import streamlit as st
 import joblib
-model = joblib.load("house_price_multilinear_regression.pkl")
+model = joblib.load("House_price_multilinear_regression.pkl")
 st.title("🏠 House Price Prediction")
 
 st.write(
