@@ -22,10 +22,10 @@ bedrooms = st.number_input(
     step=1
 )
 
-age = st.number_input(
-    " Age of House (years)",
+floor = st.number_input(
+    " no of Floors)",
     min_value=1.0,
-    max_value=20.0,
+    max_value=10.0,
     value=5.0,
     step=1.0
 )
@@ -40,14 +40,14 @@ if st.button("Predict"):
 
     elif bedrooms > 7:
         st.error("Number of bedrooms cannot be more than 7.")
-    elif age < 5:
+    elif floor < 5:
         st.error("House age cannot be less than 5 years.")
 
-    elif age > 25:
+    elif floor > 25:
         st.error("House age cannot be more than 25 years.")
 
     else:
-        prediction = model.predict([[area, bedrooms, age]])
+        prediction = model.predict([[area, bedrooms, floor]])
 
         st.success(
             f"Predicted House Price: ${prediction[0]:,.2f}"
