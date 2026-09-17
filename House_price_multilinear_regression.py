@@ -30,20 +30,20 @@ floor = st.number_input(
     step=1.0
 )
 if st.button("Predict"):
-    if area < 200:
+    if area < 600:
         st.error("Area cannot be less than 200.")
     
-    elif area > 600:
+    elif area > 3000:
         st.error("Area cannot be more than 600.")
     elif bedrooms < 1:
         st.error("Number of bedrooms must be at least 1.")
 
-    elif bedrooms > 7:
+    elif bedrooms > 4:
         st.error("Number of bedrooms cannot be more than 7.")
-    elif floor < 5:
+    elif floor < 1:
         st.error("House age cannot be less than 5 years.")
 
-    elif floor > 25:
+    elif floor > 10:
         st.error("House age cannot be more than 25 years.")
 
     else:
